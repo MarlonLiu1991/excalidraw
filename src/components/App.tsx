@@ -1534,7 +1534,11 @@ class App extends React.Component<ExcalidrawProps, AppState> {
       });
     }
     // ensures we don't prevent devTools select-element feature
-    if (event[KEYS.CTRL_OR_CMD] && event.shiftKey && event.key === KEYS.C_KEY) {
+    if (
+      event[KEYS.CTRL_OR_CMD] &&
+      event.shiftKey &&
+      event.code === KEYS.C_KEY
+    ) {
       return;
     }
 
@@ -1552,7 +1556,7 @@ class App extends React.Component<ExcalidrawProps, AppState> {
       });
     }
 
-    if (!event[KEYS.CTRL_OR_CMD] && event.altKey && event.key === KEYS.Z_KEY) {
+    if (!event[KEYS.CTRL_OR_CMD] && event.altKey && event.code === KEYS.Z_KEY) {
       this.toggleZenMode();
     }
 
@@ -1659,7 +1663,7 @@ class App extends React.Component<ExcalidrawProps, AppState> {
       const shape = findShapeByKey(event.key);
       if (shape) {
         this.selectShapeTool(shape);
-      } else if (event.key === KEYS.Q_KEY) {
+      } else if (event.code === KEYS.Q_KEY) {
         this.toggleLock();
       }
     }

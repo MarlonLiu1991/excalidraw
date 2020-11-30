@@ -23,16 +23,16 @@ export const KEYS = {
   QUESTION_MARK_KEY: "?",
   QUOTE_KEY: "'",
 
-  A_KEY: "a",
-  C_KEY: "c",
-  D_KEY: "d",
-  F_KEY: "f",
-  G_KEY: "g",
-  H_KEY: "h",
-  Q_KEY: "q",
-  S_KEY: "s",
-  V_KEY: "v",
-  Z_KEY: "z",
+  A_KEY: "KeyA",
+  C_KEY: "KeyC",
+  D_KEY: "KeyD",
+  F_KEY: "KeyF",
+  G_KEY: "KeyG",
+  H_KEY: "KeyH",
+  Q_KEY: "KeyQ",
+  S_KEY: "KeyS",
+  V_KEY: "KeyV",
+  Z_KEY: "KeyZ",
 } as const;
 
 export type Key = keyof typeof KEYS;

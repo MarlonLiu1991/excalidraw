@@ -1,6 +1,5 @@
 import { ToolName } from "../queries/toolQueries";
 import { fireEvent, GlobalTestState } from "../test-utils";
-import { KEYS } from "../../keys";
 import {
   ExcalidrawElement,
   ExcalidrawLinearElement,
@@ -42,6 +41,7 @@ export class Keyboard {
       ctrlKey,
       shiftKey,
       altKey,
+      code: `Key${key}`,
     });
   };
 
@@ -51,6 +51,7 @@ export class Keyboard {
       ctrlKey,
       shiftKey,
       altKey,
+      code: `Key${key}`,
     });
   };
 
@@ -184,7 +185,7 @@ export class UI {
   static group(elements: ExcalidrawElement[]) {
     mouse.select(elements);
     Keyboard.withModifierKeys({ ctrl: true }, () => {
-      Keyboard.keyPress(KEYS.G_KEY);
+      Keyboard.keyPress("G");
     });
   }
 }
